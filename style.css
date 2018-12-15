@@ -1,0 +1,31 @@
+
+body {
+    font-family: sans-serif;
+}
+
+nav {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+nav li {
+    display: inline;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+.form input {
+    display: block;
+    margin-left: 10px;
+}
+
+#current {
+    text-align: center;
+}

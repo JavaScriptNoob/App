@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="App">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.deep_orange-amber.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!-- Links a bootstrap stylesheet -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="Dashboard.css">
+    <title>Angularjs</title>
+</head>
+
+<body>
+
+    <nav ng-controller="AuthCtrl">
+        <li>
+            <a href="#!/">Home</a>
+        </li>
+        <li ng-if="!user">
+            <a href="#!/sign-up">Sign Up</a>
+        </li>
+        <li ng-if="!user">
+            <a href="#!/login">Login</a>
+        </li>
+        <li ng-if="user">
+            <a href ng-click="signOut()">Sign Out</a>
+        </li>
+    </nav>
+
+    <div ng-view></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.6.9/angular-route.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+ 
+  <script src="Dashboard.js"></script>
+    <script src="app.js"></script>
+    <script src="controllers.js"></script>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
+
+    <!-- AngularFire -->
+    <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCEdP4KWsavqBmpd0zIxLa7AsaxwWeiD3A",
+    authDomain: "tuff-firebase-login.firebaseapp.com",
+    databaseURL: "https://tuff-firebase-login.firebaseio.com",
+    projectId: "tuff-firebase-login",
+    storageBucket: "tuff-firebase-login.appspot.com",
+    messagingSenderId: "586111574109"
+  };
+  firebase.initializeApp(config);
+</script>
+
+
+</body>
+
+</html>
